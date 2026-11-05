@@ -1,5 +1,5 @@
 import { Link, Navigate } from 'react-router-dom'
-import { CheckCircle2, MessageCircle, RotateCcw } from 'lucide-react'
+import { CheckCircle2, CircleCheckBig, MessageCircle, RotateCcw } from 'lucide-react'
 import { Button } from '@/components/ui/button'
 import { getProfile } from '@/features/survey/data/profiles'
 import { getWorkPlan } from '@/features/survey/data/work-plans'
@@ -146,7 +146,24 @@ export default function ProposalPage() {
         </div>
       </div>
 
-      <div className="mt-10 flex flex-col gap-3 sm:flex-row sm:flex-wrap">
+      <div className="glass mt-8 rounded-3xl border-zone-green/30 p-6">
+        <div className="flex items-start gap-3">
+          <div className="flex h-10 w-10 shrink-0 items-center justify-center rounded-xl bg-zone-green/15 text-zone-green">
+            <CircleCheckBig className="h-5 w-5" />
+          </div>
+          <div>
+            <h3 className="font-display text-lg font-semibold text-zone-green">
+              Pagás por proyecto exitoso
+            </h3>
+            <p className="mt-1 text-sm leading-relaxed text-muted">
+              Nuestro modelo es simple: el cliente solo paga si vende. Si no hay
+              resultados, no hay costo.
+            </p>
+          </div>
+        </div>
+      </div>
+
+      <div className="mt-6 flex flex-col gap-3 sm:flex-row sm:flex-wrap">
         {whatsappUrl ? (
           <Button asChild size="lg">
             <a href={whatsappUrl} target="_blank" rel="noreferrer">

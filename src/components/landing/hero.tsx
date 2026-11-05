@@ -1,6 +1,6 @@
 import { motion } from 'framer-motion'
 import { Link } from 'react-router-dom'
-import { ArrowRight, Sparkles } from 'lucide-react'
+import { ArrowRight, CircleCheckBig, Sparkles } from 'lucide-react'
 import { Button } from '@/components/ui/button'
 
 export function Hero() {
@@ -30,6 +30,10 @@ export function Hero() {
             Descubrí en minutos el estado digital de tu empresa y recibí un plan
             de trabajo para aumentar ventas con tienda, WhatsApp, logística y
             marketing profesional.
+          </p>
+          <p className="mx-auto mt-5 inline-flex max-w-xl items-center justify-center gap-2 rounded-full border border-zone-green/40 bg-zone-green/10 px-4 py-2 text-sm font-semibold text-zone-green">
+            <CircleCheckBig className="h-4 w-4 shrink-0" />
+            Solo pagás si vendés. Si no hay resultados, no hay costo.
           </p>
           <div className="mt-10 flex flex-col items-center justify-center gap-3 sm:flex-row">
             <Button asChild size="lg">
